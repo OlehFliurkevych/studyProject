@@ -1,10 +1,14 @@
-import java.util.EnumSet;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
   public static void main(String[] args) {
-    EnumSet<County> counties = EnumSet.of(County.UKRAINE, County.SPAIN);
+    Car car1 = new Car(1L, CarType.MINIVAN, "title1", 400);
+    Car car2 = new Car(1L, CarType.SEDAN, "title2", 500);
 
-    counties.forEach(county -> System.out.println(county));
+    List<Car> cars = Arrays.asList(car1, car2);
+
+    cars.forEach(car -> System.out.println(car));
   }
 }
